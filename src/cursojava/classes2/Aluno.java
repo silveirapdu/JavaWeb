@@ -4,6 +4,8 @@ import java.sql.Array;
 import java.util.ArrayList;
 import java.util.List;
 
+import cursojava.constantes.StatusAluno;
+
 public class Aluno {
 
 	private String nome;
@@ -137,12 +139,12 @@ public class Aluno {
 	public String getAprovado2(){
 		
 		if(this.getMediaAluno()< 5){
-			return "Reprovado";
+			return StatusAluno.REPROVADO;
 		}else{
 			if(this.getMediaAluno()< 7){
-				return "Recuperação";
+				return StatusAluno.RECUPERACAO;
 			}else{
-				return "Aprovado";
+				return StatusAluno.APROVADO;
 			}
 		}
 	}
